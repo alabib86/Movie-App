@@ -9,6 +9,9 @@ const String _key = "cc5b812a11ac76a779e943b41a16756e";
 class LatestMoviesProvider with ChangeNotifier {
   bool isLoadingLatest = false;
   final String _latest = "https://api.themoviedb.org/3/movie/popular?api_key=";
+
+//latest movie rerurn only one object so replaced with popular
+
   List<MovieModel> latestMoviesList = [];
   List<MovieModel> showList = [];
 
