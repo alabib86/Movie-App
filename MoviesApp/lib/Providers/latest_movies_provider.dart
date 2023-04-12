@@ -38,6 +38,7 @@ class LatestMoviesProvider with ChangeNotifier {
   }
   nextMovies(int x){
     showList.clear();
+//only 5 not 10 in page cause is a short list
     for(int i=0;i<5;i++){
       if(latestMoviesList[x].id != null){
       showList.add(latestMoviesList[x]);
