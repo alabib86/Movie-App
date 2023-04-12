@@ -25,6 +25,7 @@ class ComparisonProvider with ChangeNotifier {
       d.releaseDate = responseBody['release_date'];
       d.originCountry =
           responseBody['production_companies'][0]['origin_country'];
+//there are no actors in this body so replaced with overview
       d.overview = responseBody['overview'];
         comparisonList.add(d);
     }
