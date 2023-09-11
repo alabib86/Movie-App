@@ -9,9 +9,6 @@ const String _key = "cc5b812a11ac76a779e943b41a16756e";
 class LatestMoviesProvider with ChangeNotifier {
   bool isLoadingLatest = false;
   final String _latest = "https://api.themoviedb.org/3/movie/popular?api_key=";
-
-//latest movie rerurn only one object so replaced with popular
-
   List<MovieModel> latestMoviesList = [];
   List<MovieModel> showList = [];
 
@@ -38,7 +35,6 @@ class LatestMoviesProvider with ChangeNotifier {
   }
   nextMovies(int x){
     showList.clear();
-//only 5 not 10 in page cause is a short list
     for(int i=0;i<5;i++){
       if(latestMoviesList[x].id != null){
       showList.add(latestMoviesList[x]);
